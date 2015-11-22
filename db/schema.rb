@@ -23,4 +23,8 @@ ActiveRecord::Schema.define(version: 20151118173053) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "sampletable", force: :cascade do |t|
+    t.string "text", limit: 100
+  end
+
 end
