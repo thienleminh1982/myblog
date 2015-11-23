@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Myblog</title>
+  <title>Thien's blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container-fluid">
+  <nav class="navbar navbar-light bg-faded" id="main_navs">
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/articles">Articles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/articles/new">New article</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/">About</a>
+      </li>
+    </ul>
 
-<%= yield %>
+  </nav>
+
+  <%= yield %>
+
+  <footer class="navbar navbar-light bg-faded">
+    <div class="container" align="middle">
+      <p class="text-muted">Designed and built with all the love in the world by @thienleminh1982 :-)
+        <br/>
+        <a class="nav-link" href="https://github.com/thienleminh1982">thienleminh1982 on GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</div>
 
 </body>
 </html>

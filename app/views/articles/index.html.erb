@@ -1,9 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-  <h1>Thien's blog</h1>
-  <h3>This is my first RoR applications for CoderSchool</h3>
-  <%= render @articles %>
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-block">
+          <h2>Enter search title</h2>
+          <%= form_tag(articles_path, :method => "get", enforce_utf8: false, class: "navbar-form", id: "search-form") do %>
+              <%= label_tag(:searchLabel, "Title") %>
+              <%= text_field_tag :search, params[:search]  %>
+              <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <%= link_to 'New Article', new_article_path %>
+<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <%= render @articles %>
 </div>
