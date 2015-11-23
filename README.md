@@ -39,7 +39,7 @@ To be fixed:
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](http://i.imgur.com/link/to/your/gif/file.gif)
+![Video Walkthrough](https://github.com/thienleminh1982/myblog/blob/master/myblog_walkthrough.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
