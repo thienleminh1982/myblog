@@ -26,8 +26,14 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
+- [x] Basic validation for required fields (e.g: blog title)
+- [x] Display timestamp for each blog entry or comment (last updated field)
 - [ ] Pagination
-- [ ] Login page, user authetication.
+- [ ] Login page, user authentication.
+
+To be fixed:
+- [ ] Navigation bar: when item selected, it must be highlighted.
+- [ ] Navigation bar: add dropdown in navbar to group the Article related items: "List articles", "New article"
 
 ## Video Walkthrough
 
@@ -39,7 +45,17 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+- Must install the postgresql locally properly, also edit the "database.yml" with development and test entry.
+  Test the app to work locally first.
+  => Lesson-learned: follow the principle to make the dev and prod environment as similar as possible.
+  
+- Heroku does not support sqlite3. Thefore, have to remove sqlite3 from "gemfile"
+    https://devcenter.heroku.com/articles/sqlite3
+    http://stackoverflow.com/questions/7963561/heroku-cannot-run-git-push-heroku-master	  
+    http://stackoverflow.com/questions/10455527/sqlite3-h-missing-when-pushing-rails-app-to-heroku
+- Gem 'spring' on "gemfile" causes crash when deployed the app to heroku:
+    http://stackoverflow.com/questions/33793812/error-when-loading-heroku-app
+- For Rails beginners, have to read a lot on the documentation to really understand what is done behind the scene.
 
 ## License
 
